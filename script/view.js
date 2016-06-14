@@ -1,16 +1,22 @@
 (function(module) {
   var view = {};
 
+
   view.slideUp = function() {
+    $('#page2').hide();
     $('.video-container , #see-work').on('click', function(e){
       console.log('clicked!');
       $('#slideUp').slideUp(1000, function() {
+        view.nextPage();
         console.log('hi!');
       });
-      // $('.video-container').toggleClass('video-container-hide');
-      // $('.homepage-hero-module').toggleClass('homepage-hero-white');
-      // $('.homepage-hero-module').removeClass('homepage-hero-module');
     });
+  };
+
+  view.nextPage = function() {
+    $('.homepage-hero-module').hide();
+    $('#page2').show();
+
   };
 
 

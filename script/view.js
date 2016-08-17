@@ -3,7 +3,7 @@
 
 
   view.slideUp = function() {
-    $('#page2').hide();
+    $('.row').hide();
     $('.video-container , #see-work').on('click', function(e){
       console.log('clicked!');
       $('#slideUp').slideUp(1000, function() {
@@ -13,11 +13,10 @@
     });
   };
 
-  view.nextPage = function() {
-    $('.homepage-hero-module').hide();
-    $('#page2').show();
-
-  };
+  // view.nextPage = function() {
+  //   $('.homepage-hero-module').hide();
+  //   $('.row').show();
+  // };
 
 
   view.slideUp();
